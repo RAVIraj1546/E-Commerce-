@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+.intro, .mission, .team {
+    margin-top: 20px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.member {
+    background-color: #f4f4f4;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.member:hover {
+    background-color: #ddd;
+}
+</style>
+<body>
+    <header>
+        <h1>About Our Shopping Website</h1>
+    </header>
+    
+    <section class="intro">
+        <h2>Who We Are</h2>
+        <p>Welcome to RRY Shop, your go-to destination for amazing products at the best prices. We are committed to delivering quality and customer satisfaction.</p>
+    </section>
+    
+    <section class="mission">
+        <h2>Our Mission</h2>
+        <p>To provide an exceptional shopping experience, ensuring premium quality and top-notch service.</p>
+    </section>
+    
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-members">
+            <div class="member" onclick="showDetails('John Doe')">
+                <h3>Raviraj Yadav</h3>
+                <p>CEO & Founder</p>
+            </div>
+            <div class="member" onclick="showDetails('Jane Smith')">
+                <h3>Rahul Sakuniya</h3>
+                <p>Head of Marketing</p>
+            </div>
+        </div>
+        <p id="team-details"></p>
+    </section>
+
+    <script src="script.js">function showDetails(name) {
+      const details = {
+          "John Doe": "John has over 20 years of experience in e-commerce and business strategy.",
+          "Jane Smith": "Jane specializes in digital marketing and brand development."
+      };
+  
+      document.getElementById("team-details").innerText = details[name] || "Click on a team member to see details!";
+  }</script>
+</body>
+</html>

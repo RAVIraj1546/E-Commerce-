@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Shopping Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+.blog {
+    margin-top: 20px;
+}
+
+.post {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.preview {
+    font-style: italic;
+}
+
+.full {
+    display: none;
+    color: #f3eded;
+}
+
+button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+</style>
+<body>
+    <header>
+        <h1>Our Blog</h1>
+    </header>
+
+    <section class="blog">
+        <div class="post">
+            <h2>Top Fashion Trends in 2025</h2>
+            <p class="preview">Fashion evolves, and 2025 is no different! Discover the latest styles taking over the industry...</p>
+            <button onclick="toggleReadMore('post1')">Read More</button>
+            <p class="full" id="post1">This year, minimalist designs, sustainable fashion, and vibrant color palettes are defining style. Explore how to integrate these trends into your daily wardrobe.</p>
+        </div>
+
+        <div class="post">
+            <h2>Best Online Shopping Tips</h2>
+            <p class="preview">Shopping online? Get the best deals and avoid common pitfalls with these expert tips...</p>
+            <button onclick="toggleReadMore('post2')">Read More</button>
+            <p class="full" id="post2">Make use of price comparison tools, read customer reviews, and watch out for flash sales to maximize savings while shopping online.</p>
+        </div>
+    </section>
+
+    <script src="script.js">function toggleReadMore(postId) {
+        const fullText = document.getElementById(postId);
+        fullText.style.display = fullText.style.display === "none" ? "block" : "none";
+    }</script>
+</body>
+</html>
